@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs'); %>
+
+  <body>
+    <%- include('./partials/nav.ejs'); %>
+      <div class="grid-x align-center grid-padding-x">
+        <div class="medium-12 large-8 cell">
+          <div class="about">
+            <h3 class="about-title ">About me</h3>
+            <div class="grid-x grid-padding-x">
+              <div class="small-12 medium-4 cell">
+                <div class="about-image">
+                  <img src="<%= img %>">
+                </div>
+                <div class="about-social">
+                  <a class="github" href="<%= github %>" title="github" target="_blank" aria-label="github"></a>
+                  <a class="twitter" href="<%= twitter %>" title="twitter" target="_blank" aria-label="twitter"></a>
+                  <a class="website" href="<%= website %>" title="website" target="_blank" aria-label="website"></a>
+                </div>
+              </div>
+              <div class="small-12 medium-8 cell">
+                <h4 class="separator-left">
+                  <%= name %>
+                </h4>
+                <% const paras=about.split('\n') %>
+                  <% paras.forEach(para=> { %>
+                    <p>
+                      <%= para %>
+                    </p>
+                    <% }) %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <%- include('./partials/scripts.ejs'); %>
+  </body>
+
+</html>

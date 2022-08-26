@@ -1,0 +1,22 @@
+<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+  <div class="title-bar-title">Menu</div>
+</div>
+
+<div class="top-bar" id="responsive-menu">
+  <div class="top-bar-left">
+    <a href="/" class="site-title">Shahzar Mazhar</a>
+  </div>
+  <div class="top-bar-right">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <% const menuItems=[ { text: 'Home' , slug: '/' }, { text: 'About' , slug: '/about' }, { text: 'Contact' ,
+        slug: '/contact-me' }] %>
+        <% menuItems.forEach( ({text, slug})=> { %>
+          <% const activeClass=active===slug ? ' class=active' : '' %>
+            <li<%=activeClass %>>
+              <a href=<%=slug%>><%=text%></a>
+              </li>
+              <% }) %>
+    </ul>
+  </div>
+</div>

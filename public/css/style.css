@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('./fonts/fa-solid-900.woff2');
+}
+
+@font-face {
+  font-family: 'FontAwesomeBrand';
+  src: url('./fonts/fa-brands-400.woff2');
+}
+
+a.site-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgb(26, 26, 26);
+}
+
+.contact-us-section {
+  padding: 2rem;
+  background: #fefefe;
+
+}
+
+.contact-us-section .contact-us-section-left {
+  padding-right: 2rem;
+  border-bottom: 2px solid #e6e6e6;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+
+@media print,
+screen and (min-width: 40em) {
+  .contact-us-section .contact-us-section-left {
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.contact-us-section .contact-us-section-right {
+  padding-left: 2rem;
+}
+
+@media print,
+screen and (min-width: 40em) {
+  .contact-us-section .contact-us-section-right {
+    border-left: 1px solid #e6e6e6;
+  }
+}
+
+.contact-us-section .contact-us-header {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 40em) and (max-width: 74.9375em) {
+  .contact-us-section .contact-us-header {
+    font-size: 32px;
+  }
+}
+
+.contact-us-section .responsive-embed {
+  margin-bottom: 0;
+  padding-bottom: 55%;
+}
+
+.contact-us-form input[type=text],
+.contact-us-form input[type=email],
+.contact-us-form textarea {
+  margin-bottom: 1.5rem;
+}
+
+.contact-us-form-actions {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.contact-us-form-actions input[type=submit] {
+  border-radius: 5000px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.contact-us-form-actions .contact-us-file-button {
+  background: transparent;
+  color: #8a8a8a;
+}
+
+.contact-us-list {
+  list-style-type: none;
+  margin: 0;
+}
+
+.contact-us-list li a {
+  color: #0a0a0a;
+}
+
+.contact-us-list li::before {
+  margin-right: 2rem;
+  font-size: 2rem;
+  vertical-align: middle;
+  color: #8a8a8a;
+  font-family: 'FontAwesome';
+}
+
+.contact-us-list .address::before {
+  content: '\f041';
+  margin-left: 0.4rem;
+  margin-right: 2.3rem;
+}
+
+.contact-us-list .email a:hover {
+  text-decoration: underline;
+}
+
+.contact-us-list .email::before {
+  content: '\f003';
+}
+
+.contact-us-list .phone::before {
+  content: '\f098';
+}
+
+
+.about {
+  background-color: #fefefe;
+  padding: 1rem;
+  /* border: 1px solid #cacaca; */
+}
+
+.about .grid {
+  grid-gap: 20px;
+}
+
+.about .separator-left {
+  text-align: left;
+}
+
+.about .separator-left::before,
+.about .separator-left::after {
+  display: table;
+  content: ' ';
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.about .separator-left::after {
+  clear: both;
+}
+
+.about .separator-left::after {
+  position: relative;
+  width: 5rem;
+  border-bottom: 0.125rem solid #1779ba;
+  margin: 0.3rem auto 0;
+  margin-left: 0;
+}
+
+.about .about-title {
+  text-transform: uppercase;
+}
+
+.about .about-social {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  font-family: 'FontAwesomeBrand';
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* .about .about-social a::before {
+  display: inline-block;
+} */
+
+.about .about-social .github::before {
+  content: '\f09b';
+  color: #171515;
+}
+
+.about .about-social .github:hover::before,
+.about .about-social .github:focus::before {
+  color: #333131;
+}
+
+.about .about-social .twitter::before {
+  content: '\f099';
+  color: #1DA1F2
+}
+
+.about .about-social .twitter:hover::before,
+.about .about-social .twitter:focus::before {
+  color: #108ad6
+}
+
+.about .about-social .website::before {
+  content: '\f267';
+  color: #0694bb;
+}
+
+.about .about-social .website:hover::before,
+.about .about-social .website:focus::before {
+  color: #0e7490;
+}
