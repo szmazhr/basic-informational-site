@@ -27,19 +27,9 @@ app.use(express.json({
   type: "*/*"
 }))
 
-app.post('/send-message', (req, res) => {
-  const message = new Message(req.body);
-  message.save()
-    .then(() => {
-      res.json({
-        success: true
-      })
-    })
-    .catch(console.log);
-})
 
 app.get('/', (req, res) => {
-  res.render('index', {title: 'Home', active: req.url});
+  res.render('index', { title: 'Home', active: req.url });
 })
 
 app.get('/about', (req, res) => {
@@ -68,6 +58,28 @@ app.get('/contact-me', (req, res) => {
   res.render('contact-me', options);
 })
 
+
+app.post('/send-message', (req, res) => {
+  const { name, email, message: msg } = req.body
+  const message = new Message({
+    email,
+    message: msg || "There is no message",
+    name: name || "Anonymous"
+  });
+  message.save()
+    .then(() => {
+      res.json({
+        success: true
+      })
+    })
+    .catch((err) => {
+      res.json({
+        success: false
+      })
+      console.log(err)
+    });
+})
+
 app.use((req, res) => {
-  res.render('404', {title: 'Error 404 | Not Found', active: req.url});
+  res.render('404', { title: 'Error 404 | Not Found', active: req.url });
 });
